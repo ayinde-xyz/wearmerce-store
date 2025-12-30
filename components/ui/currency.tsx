@@ -5,18 +5,18 @@ import { useEffect, useState } from "react";
 // import { Decimal } from "@prisma/client/runtime/library";
 
 interface CurrencyProps {
-  value?: string | number | any;
+	value?: string | number | any;
 }
 
 const Currency: React.FC<CurrencyProps> = ({ value = 0 }) => {
-  const [isMounted, setIsMounted] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
-  if (!isMounted) return null;
-  return <p className="font-semibold">{formatter.format(Number(value))}</p>;
+	if (!isMounted) return null;
+	return <p className="font-semibold">{formatter.format(Number(value))}</p>;
 };
 
 export default Currency;

@@ -1,1 +1,26 @@
-{"status":"error","originalFilePath":"https://res.cloudinary.com/dbgxwchuy/image/upload/v1734502847/znikjc4okleqlq2ljnja.webp","provider":"mux","providerMetadata":{"mux":{"assetId":"EjEHyjH1pEZn006UEnaHlGfXazabil3N01LFRHNb61H88","playbackId":"3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA"}},"createdAt":1735035905729,"updatedAt":1735035908175,"sources":[{"src":"https://stream.mux.com/3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA.m3u8","type":"application/x-mpegURL"}],"poster":"https://image.mux.com/3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA/thumbnail.webp","error":{"type":"invalid_input","messages":["The input file did not have a duration or was too short. The minimum supported duration is 500ms."]}}
+{
+	"status": "error",
+	"originalFilePath": "https://res.cloudinary.com/dbgxwchuy/image/upload/v1734502847/znikjc4okleqlq2ljnja.webp",
+	"provider": "mux",
+	"providerMetadata": {
+		"mux": {
+			"assetId": "EjEHyjH1pEZn006UEnaHlGfXazabil3N01LFRHNb61H88",
+			"playbackId": "3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA"
+		}
+	},
+	"createdAt": 1735035905729,
+	"updatedAt": 1735035908175,
+	"sources": [
+		{
+			"src": "https://stream.mux.com/3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA.m3u8",
+			"type": "application/x-mpegURL"
+		}
+	],
+	"poster": "https://image.mux.com/3nl01SMLfgxuAi0101y6IJMhCjyS3TnwVQylVhB5qu4lIA/thumbnail.webp",
+	"error": {
+		"type": "invalid_input",
+		"messages": [
+			"The input file did not have a duration or was too short. The minimum supported duration is 500ms."
+		]
+	}
+}
