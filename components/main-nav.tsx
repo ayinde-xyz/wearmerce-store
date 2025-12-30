@@ -5,11 +5,18 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Category } from "@/types";
+import { Bebas_Neue } from "next/font/google";
 
 interface MainNavProps {
   data: Category[];
   className?: React.ComponentPropsWithoutRef<"nav">["className"];
 }
+
+const Bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 const MainNav: React.FC<MainNavProps> = ({ data, className }) => {
   const pathname = usePathname();
@@ -27,8 +34,8 @@ const MainNav: React.FC<MainNavProps> = ({ data, className }) => {
           key={route.href}
           href={route.href}
           className={cn(
-            "text-sm font-medium transition-colors hover:text-black",
-            route.active ? "text-black" : "text-neutral-500"
+            `text-2xl  ${Bebas.className} `,
+            route.active && "underline underline-offset-4"
           )}>
           {route.label}
         </Link>

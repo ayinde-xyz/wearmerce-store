@@ -7,7 +7,6 @@ import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
 
 import { Amatic_SC } from "next/font/google";
-import { SidebarTrigger } from "./ui/sidebar";
 
 export const revalidate = 0;
 
@@ -23,18 +22,13 @@ const Navbar = async () => {
 
   return (
     <div className="border-b">
-      <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
-          <SidebarTrigger />
-          <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-            <p className={`text-2xl font-bold ${Amantic.className}`}>
-              WEARMERCE
-            </p>
-          </Link>
-          <MainNav data={categories} className={"hidden md:flex  space-x-4"} />
-          <NavbarActions />
-        </div>
-      </Container>
+      <div className="relative px-4 sm:px-6 lg:px-8 flex justify-between  h-16 items-center">
+        <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
+          <p className={`text-2xl font-bold ${Amantic.className}`}>WEARMERCE</p>
+        </Link>
+        <MainNav data={categories} className={"hidden md:flex  space-x-4"} />
+        <NavbarActions />
+      </div>
     </div>
   );
 };
