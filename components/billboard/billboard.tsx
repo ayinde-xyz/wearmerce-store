@@ -1,6 +1,6 @@
 import { type Billboard } from "@/types";
 import BackgroundVideo from "next-video/background-video";
-import testVideo from "@/videos/test.mp4";
+import testVideo from "https://res.cloudinary.com/dbgxwchuy/video/upload/v1767202094/nike_k3n8ww.mp4";
 
 interface BillboardProps {
   data: Billboard;
@@ -48,7 +48,9 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
     // </div>
 
     <BackgroundVideo
-      src={testVideo}
+      src={
+        "https://res.cloudinary.com/dbgxwchuy/video/upload/v1767202094/nike_k3n8ww.mp4"
+      }
       className="rounded-xl relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover">
       <div className="h-full justify-center items-center text-center w-full flex flex-col gap-y-8">
         <div className="font-bold  text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
