@@ -9,6 +9,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
+import { useAutoplayProgress } from "@/hooks/use-autoplay-progress";
+import useEmblaCarousel from "embla-carousel-react";
+import { useRef } from "react";
 
 interface BillboardProps {
   data: Billboard;
@@ -27,6 +30,16 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
   };
 
   const isImage = isImageUrl(data.imageUrl);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({
+      playOnInit: false,
+      delay: 2000,
+    }),
+  ]);
+  const progressNode = useRef<HTMLDivElement>(null);
+
+  const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
   return (
     // <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden ">
@@ -55,50 +68,50 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
     // 	)}
     // </div>
     <Carousel
+      className="relative"
       orientation="horizontal"
       plugins={[
         Autoplay({
           delay: 2000,
           stopOnInteraction: false,
-          playOnInit: false,
         }),
       ]}>
       <CarouselContent>
         <CarouselItem>
           <div
             style={{ backgroundImage: `url(${data.imageUrl})` }}
-            className=" relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border">
-            <div className="absolute bottom-4 right-4 flex  space-x-1">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </div>
+            className="relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border"></div>
         </CarouselItem>
         <CarouselItem>
           <div
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dbgxwchuy/image/upload/v1767283415/puma_image_rgpi7d.avif)`,
             }}
-            className="relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border">
-            <div className="absolute bottom-4 right-4 flex space-x-1">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </div>
+            className="relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border"></div>
         </CarouselItem>
         <CarouselItem>
           <div
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dbgxwchuy/image/upload/v1767284475/adidas_ug18jv.jpg)`,
             }}
-            className=" relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-center bg-clip-border">
-            <div className="absolute bottom-4 right-4 flex space-x-1">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </div>
+            className=" relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-center bg-clip-border"></div>
         </CarouselItem>
       </CarouselContent>
+      <div className="absolute bottom-4 right-4 flex flex-col items-center space-y-2">
+        <div className="flex space-x-1">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
+        <div
+          className={`rounded-full shadow-md relative w-10 h-[0.3rem] justify-self-end align-center  overflow-hidden bg-slate-200 justify-center transition-opacity duration-2000 ease-in-out`.concat(
+            showAutoplayProgress ? "" : "opacity-0"
+          )}>
+          <div
+            className="absolute w-full top-0 bottom-0  bg-slate-800 animate-wiggle"
+            ref={progressNode}
+          />
+        </div>
+      </div>
     </Carousel>
   );
 };
