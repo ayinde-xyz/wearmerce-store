@@ -68,7 +68,6 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
     // 	)}
     // </div>
     <Carousel
-      className="relative"
       orientation="horizontal"
       plugins={[
         Autoplay({
