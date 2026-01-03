@@ -7,6 +7,7 @@ import { metadata } from "@/lib/metadata";
 import { Toaster } from "@/components/ui/sonner";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import Header from "@/components/header";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export default function RootLayout({
           <main className="w-full">
             <ModalProvider />
 
-            <Navbar />
+            <Header />
             {children}
             <Footer />
           </main>

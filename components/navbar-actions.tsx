@@ -24,7 +24,7 @@ const NavbarActions = () => {
         size={"icon-lg"}
         variant={"ghost"}
         className="flex relative items-center rounded-full bg-transparent">
-        <ShoppingBag className="size-8" color="black" />
+        <ShoppingBag className="md:size-8 size-6" color="black" />
         <div className="absolute left-0 top-0 h-4 flex  justify-center w-4 rounded-full text-center  bg-red-500  text-sm text-white">
           <div>{cart.items.length}</div>
         </div>
