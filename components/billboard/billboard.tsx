@@ -108,15 +108,15 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
             style={{ backgroundImage: `url(${data.imageUrl})` }}
             className="relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border">
             <div className="h-full bg-linear-to-b  from-gray-300/10 to-slate-600/60 to-95% backdrop-opacity-95   text-center w-full ">
-              <div className="absolute bottom-3 left-3 flex space-y-2 ">
-                <h1 className="font-bold tracking-tight text-amber-50  text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+              <div className="absolute bottom-3 left-3 w-[70%] text-left flex space-y-2 md:space-y-4 flex-col items-start ml-6 mb-4">
+                <h1 className="font-bold tracking-tight text-amber-50  text-xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
                   YOU CAN DO IT
                 </h1>
-                <p className="text-amber-50">
+                <p className="text-amber-50 line-clamp-3">
                   Stay on the offense by shopping from our latest collection in
                   Nike and Adidas
                 </p>
-                <Button className="flex itesm-center gap-x-2">
+                <Button className="rounded-none">
                   <Link href={"/"}>Shop now</Link>
                 </Button>
               </div>
@@ -129,10 +129,17 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
               backgroundImage: `url(https://res.cloudinary.com/dbgxwchuy/image/upload/v1767283415/puma_image_rgpi7d.avif)`,
             }}
             className="relative  aspect-3/4  md:aspect-[2.4/1] overflow-hidden bg-cover bg-left md:bg-center bg-clip-border">
-            <div className="h-full bg-linear-to-b  from-gray-300/10 to-slate-600/60 to-95% backdrop-opacity-95  text-amber-50 justify-center items-center text-center w-full flex flex-col gap-y-8">
-              <h1 className="font-bold tracking-tight text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+            <div className="absolute bottom-3 left-3 w-[70%] text-left flex space-y-2 md:space-y-4 flex-col items-start ml-6 mb-4">
+              <h1 className="font-bold tracking-tight text-amber-50  text-xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
                 YOU CAN DO IT
               </h1>
+              <p className="text-amber-50 line-clamp-3">
+                Stay on the offense by shopping from our latest collection in
+                Nike and Adidas
+              </p>
+              <Button className="rounded-none">
+                <Link href={"/"}>Shop now</Link>
+              </Button>
             </div>
           </div>
         </CarouselItem>
@@ -142,10 +149,17 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
               backgroundImage: `url(https://res.cloudinary.com/dbgxwchuy/image/upload/v1767284475/adidas_ug18jv.jpg)`,
             }}
             className=" relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-center bg-clip-border">
-            <div className="h-full bg-linear-to-b  from-gray-300/10 to-slate-600/60 to-95% backdrop-opacity-95   text-amber-50 justify-center items-center text-center w-full flex flex-col gap-y-8">
-              <h1 className="font-bold tracking-tight text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+            <div className="absolute bottom-3 left-3 w-[70%] text-left flex space-y-2 md:space-y-4 flex-col items-start ml-6 mb-4">
+              <h1 className="font-bold tracking-tight text-amber-50  text-xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
                 YOU CAN DO IT
               </h1>
+              <p className="text-amber-50 line-clamp-3">
+                Stay on the offense by shopping from our latest collection in
+                Nike and Adidas
+              </p>
+              <Button className="rounded-none">
+                <Link href={"/"}>Shop now</Link>
+              </Button>
             </div>
           </div>
         </CarouselItem>
