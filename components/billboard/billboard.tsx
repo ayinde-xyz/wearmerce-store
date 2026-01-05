@@ -148,7 +148,7 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dbgxwchuy/image/upload/v1767284475/adidas_ug18jv.jpg)`,
             }}
-            className=" relative aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-center bg-clip-border">
+            className=" relative text-red-400 aspect-3/4 md:aspect-[2.4/1] overflow-hidden bg-cover bg-center bg-clip-border">
             <div className="absolute bottom-3 left-3 w-[70%] text-left flex space-y-2 md:space-y-4 flex-col items-start ml-6 mb-4">
               <h1 className="font-bold tracking-tight text-amber-50  text-xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
                 YOU CAN DO IT
