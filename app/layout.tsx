@@ -1,7 +1,6 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
 import ModalProvider from "@/providers/modal-provider";
 import { metadata } from "@/lib/metadata";
 import { Toaster } from "@/components/ui/sonner";
