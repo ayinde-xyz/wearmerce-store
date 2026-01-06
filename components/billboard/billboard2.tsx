@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Billboard2 = () => {
   return (
@@ -14,6 +15,10 @@ const Billboard2 = () => {
           placeholder="blur"
            blurDataURL="..."
         />
+        <figcaption className="absolute bottom-4 left-4 bg-white/70 px-3 py-1 rounded-md text-sm">
+          Nike Air Max 270 React
+          <Button className="ml-4 rounded-none">Shop Now</Button>
+        </figcaption>
       </figure>
       <figure className="relative w-full aspect-square">
         <Image
@@ -26,6 +31,7 @@ const Billboard2 = () => {
           placeholder="blur"
            blurDataURL="..."
         />
+          <Button className="ml-4 rounded-none">Shop Now</Button>
       </figure>
     </div>
   );
