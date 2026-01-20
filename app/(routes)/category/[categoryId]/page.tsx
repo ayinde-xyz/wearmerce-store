@@ -3,7 +3,6 @@ import getColors from "@/actions/get-colors";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
 import Billboard from "@/components/billboard/billboard";
-import Container from "@/components/ui/container";
 import Filter from "./components/filter";
 import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
@@ -24,7 +23,7 @@ interface CategoryPageProps {
 
 export async function generateMetadata(
   { params }: CategoryPageProps,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { categoryId } = await params;
   const category = await getCategory(categoryId);
@@ -85,9 +84,8 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
 
   return (
     <div className="bg-white">
-      <Container>
-        <Billboard data={category.billboard} />
-      </Container>
+      <Billboard data={category.billboard} />
+
       <div className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
           <MobileFilters sizes={sizes} colors={colors} />

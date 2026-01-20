@@ -8,15 +8,10 @@ import { useEffect, useState } from "react";
 import { SidebarTrigger } from "./ui/sidebar";
 
 const NavbarActions = () => {
-  const [isMouted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const router = useRouter();
 
   const cart = useCart();
-  if (!isMouted) return null;
+
   return (
     <div className=" flex items-center">
       <Button
