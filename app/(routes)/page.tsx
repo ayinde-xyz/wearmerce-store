@@ -3,6 +3,7 @@ import getProducts from "@/actions/get-products";
 import Banner from "@/components/billboard/banner";
 import Billboard from "@/components/billboard/billboard";
 import Billboard2 from "@/components/billboard/billboard2";
+import FeaturedList from "@/components/featured-list";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
 
@@ -18,7 +19,9 @@ const HomePage = async () => {
       <Banner />
       <Billboard2 />
       <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 pb-6">
-        <ProductList title="Featured Products" products={products} />
+        <FeaturedList title={"Featured Products"} products={products}   />
+
+        {/* <ProductList title="Featured Products" products={products} /> */}
       </div>
     </div>
   );

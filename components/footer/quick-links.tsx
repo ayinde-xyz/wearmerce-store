@@ -1,7 +1,4 @@
-import getCategories from "@/actions/get-categories";
-
-const QuickLinks = async () => {
-  const categories = await getCategories();
+const QuickLinks = () => {
   return (
     <div className="pt-6">
       <div>
