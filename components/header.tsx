@@ -1,8 +1,11 @@
 import getCategories from "@/actions/get-categories";
 import Navbar from "./navbar";
 
-const Header = async () => {
-  const categories = await getCategories();
+interface HeaderProps {
+  categories: Awaited<ReturnType<typeof getCategories>>;
+}
+
+const Header = async ({ categories }: HeaderProps) => {
   return <Navbar categories={categories} />;
 };
 

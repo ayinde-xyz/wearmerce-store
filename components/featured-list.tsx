@@ -13,7 +13,7 @@ const FeaturedList = ({ title, products }: FeaturedListProps) => {
       <h3 className="font-bold text-3xl ">{title}</h3>
       {products?.length === 0 && <NoResults />}
 
-      <ul className="grid  grid-flow-col auto-cols-max gap-4 overflow-x-auto pb-4">
+      <ul className=" snap-x snap-mandatory scrollbar-thumb-rounded-full  grid  grid-flow-col auto-cols-max  gap-4 overflow-x-auto pb-4">
         {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

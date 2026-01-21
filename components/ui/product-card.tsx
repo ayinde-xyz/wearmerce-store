@@ -37,7 +37,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <li
       onClick={handleClick}
-      className="bg-white rounded-xl space-y-4 shrink-0 cursor-pointer group border p-3">
+      className="bg-white rounded-xl space-y-4 shrink-0 w-70 snap-center snap-always cursor-pointer group border p-3">
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
           alt="image"

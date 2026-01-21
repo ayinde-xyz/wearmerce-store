@@ -1,7 +1,10 @@
-import getCategories from "@/actions/get-categories";
+import { Category } from "@/types";
 
-const FooterCategories = async () => {
-  const categories = await getCategories();
+interface FooterCategoriesProps {
+  categories: Category[];
+}
+
+const FooterCategories = ({ categories }: FooterCategoriesProps) => {
   return (
     <div className="pt-6">
       <h3 className="text-lg font-bold">Category</h3>
