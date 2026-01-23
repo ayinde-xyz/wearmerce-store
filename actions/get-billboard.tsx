@@ -1,11 +1,22 @@
 import { Billboard } from "@/types";
+import queryString from "query-string";
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/billboards`;
 
-const getBillboard = async (id: string): Promise<Billboard> => {
-	const res = await fetch(`${URL}/${id}`);
+interface Query {
+  categoryId?: string;
+}
 
-	return res.json();
+const getBillboard = async (query: Query): Promise<Billboard> => {
+  const url = queryString.stringifyUrl({
+    url: URL,
+    query: {
+      categoryId: query.categoryId,
+    },
+  });
+  const res = await fetch(`${url}`);
+
+  return res.json();
 };
 
 export default getBillboard;
