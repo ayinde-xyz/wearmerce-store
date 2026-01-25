@@ -52,11 +52,6 @@ const ProductCard = ({ product }: { product: Product }) => {
               onClick={onPreview}
               className="text-gray-600"
             />
-            <IconButton
-              icon={<ShoppingCart size={20} />}
-              onClick={onAddToCart}
-              className="text-gray-600"
-            />
           </div>
         </div>
       </div>
@@ -66,6 +61,11 @@ const ProductCard = ({ product }: { product: Product }) => {
       </div>
       <div className="flex items-center justify-between">
         <Currency value={product?.price} />
+        <IconButton
+          icon={<ShoppingCart size={20} />}
+          onClick={onAddToCart}
+          className="text-gray-600"
+        />
       </div>
     </li>
   );

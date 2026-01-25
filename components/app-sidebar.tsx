@@ -33,7 +33,7 @@ export async function AppSidebar({
 
         <SidebarGroup>
           <SidebarGroupContent>
-            <MainNav data={categories} className="flex-col " />
+            <MainNav data={categories} className="flex-col" />
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
