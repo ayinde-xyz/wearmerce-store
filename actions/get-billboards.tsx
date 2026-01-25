@@ -7,7 +7,7 @@ interface Query {
   categoryId?: string;
 }
 
-const getBillboard = async (query: Query): Promise<Billboard> => {
+const getBillboard = async (query: Query): Promise<Billboard[]> => {
   const url = queryString.stringifyUrl({
     url: URL,
     query: {

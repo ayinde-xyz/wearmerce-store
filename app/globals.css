@@ -201,7 +201,7 @@
 }
 
 @theme {
-  --animate-wiggle: wiggle linear 2s infinite;
+  --animate-wiggle: wiggle linear 7s infinite;
   --animate-slide-in-left: slide-in-left 0.3s ease-out;
   --animate-slide-out-left: slide-out-left 0.3s ease-in forwards;
 
